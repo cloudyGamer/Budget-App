@@ -1,0 +1,316 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"lon",
+				"lon1628"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Bookmarks: Toggle"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/controller/checkout/cart.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/controller/product/product.php",
+		"/Users/pol/Documents/react-course-projects/Forever-Me/src/components/Product.js",
+		"/Users/pol/Documents/react-course-projects/Forever-Me/src/styles/components/_product.scss",
+		"/Users/pol/Documents/react-course-projects/Forever-Me/public/index.html",
+		"/Users/pol/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/controller/product/productEcho.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/controller/product/sampleWrite.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/model/catalog/product.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/view/theme/default/template/product/product.twig",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/controller/product/Archive/reactProduct.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/react.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/admin/language/en-gb/en-gb.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/model/catalog/react.php",
+		"/Users/pol/Library/Application Support/Sublime Text 3/Packages/User/removeLicenseReminder.py",
+		"/Applications/MAMP/htdocs/opencart-3.0.3.1/upload/catalog/model/catalog/react.php",
+		"/Applications/MAMP/htdocs/opencart-3.0.3.1/upload/catalog/controller/product/product.php",
+		"/Applications/MAMP/htdocs/opencart-3.0.3.1/upload/catalog/model/catalog/product.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/view/theme/default/template/product/productReact.twig",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/language/en-gb/product/product.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/controller/product/reactProduct.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/model/catalog/reactProduct.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/config.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/view/theme/default/template/product/reactProduct.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/controller/product/productPrice.php",
+		"/Users/pol/Documents/react-course-projects/Forever-Me/public/python_script/helloWorld.py",
+		"/Users/pol/Documents/react-course-projects/Forever-Me/public/python_script/tutorial.py",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/controller/extension/module/empty_php.php",
+		"/Users/pol/Documents/react-course-projects/Forever-Me/public/python_script/script1.py",
+		"/Users/pol/Documents/react-course-projects/Forever-Me/public/python_script/script.py",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/controller/extension/module/custom_module.php",
+		"/Applications/MAMP/conf/apache/original/httpd.conf",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/view/theme/default/template/extension/module/custom_module.twig ",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/admin/language/en-gb/extension/module/amazon_login.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/admin/controller/extension/module/amazon_login.php",
+		"/Users/pol/Documents/downloads/cloudRIG-master/gui/README.md",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/view/theme/default/template/extension/module/amazon_login.twig",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/admin/controller/extension/module/custom_module.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/admin/view/template/extension/module/amazon_login.twig",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/controller/extension/module/amazon_login.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/controller/extension/payment/amazon_login_pay.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/controller/extension/payment/custom_module_pay .php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/admin/view/template/extension/module/custom_module.twig ",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/admin/language/en-gb/extension/module/custom_module.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/language/en-gb/extension/module/amazon_login.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/catalog/language/en-gb/extension/module/custom_module.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/admin/view/template/extension/module/first_module.tpl",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/admin/controller/extension/module/first_module(amazon_copy).php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/admin/view/template/extension/module/testExtension.twig ",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/admin/controller/extension/module/first_module(removeme).php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/admin/controller/extension/module/first_module.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/admin/controller/extension/module/testExtension.php",
+		"/Applications/MAMP/htdocs/3.0.2.0-OpenCart/upload/admin/language/en-gb/extension/module/first_module.php",
+		"/Users/pol/Documents/downloads/shop.sql",
+		"/Users/pol/Documents/AAA/shop/admin/controller/extension/module/slideshow.php",
+		"/Users/pol/Documents/AAA/shop/admin/controller/extension/module/age_restriction.php",
+		"/Users/pol/Documents/A Forever Me Local/forevermecosmetics.ie/admin/controller/common/filemanager.php",
+		"/Users/pol/Documents/A Forever Me Local/forevermecosmetics.ie/admin/controller/customer/customer.php",
+		"/Users/pol/Documents/A Forever Me Local/forevermecosmetics.ie/admin/index.php",
+		"/Users/pol/Documents/A Forever Me Local/forevermecosmetics.ie/php.ini",
+		"/Users/pol/Documents/react-course-projects/forever-me-app/.babelrc",
+		"/Users/pol/Documents/react-course-projects/forever-me-app/.babelrc.json",
+		"/Users/pol/Documents/react-course-projects/forever-me-app/webpack.config.js",
+		"/Users/pol/Documents/react-course-projects/forever-me-app/node_modules/accepts/package.json",
+		"/Users/pol/Documents/react-course-projects/forever-me-app/package.json",
+		"/Users/pol/Documents/react-course-projects/forever-me-app/nbproject/project.xml",
+		"/Users/pol/Documents/react-course-projects/forever-me-app/nbproject/project.properties",
+		"/Users/pol/Documents/react-course-projects/forever-me-app/nbproject/private/private.xml",
+		"/Users/pol/Documents/react-course-projects/forever-me-app/nbproject/private/private.properties",
+		"/Users/pol/Documents/shopify/product_template-783a3f2c6915c42571c5f6dcf2df80ce9e011f280fc68bbe83125f989f9aaf51.csv",
+		"/Users/pol/Documents/Forever Me/Forever-Me-JQUERY/Forever-Me-JQUERY/public_html/JS/jquery-ui-1.8.16.custom.min.js",
+		"/Applications/MAMP/conf/apache/httpd.conf",
+		"/Users/pol/Documents/test-jquery/database.sql",
+		"/Users/pol/Documents/MajorProject1.1C08342211/App/symbolsmith11/www/version2.3/index.html",
+		"/Users/pol/Documents/MajorProject1.1C08342211/App/symbolsmith11/www/version2.1/index.html",
+		"/Users/pol/Documents/react-course-projects/Indecision-app/.babelrc.json",
+		"/Users/pol/Documents/react-course-projects/Indecision-app/src/playground/app.js",
+		"/Users/pol/symbolsmith11/www/testJavacopy5.NEW Backup1.17.js",
+		"/Users/pol/symbolsmith11/www/css/index.css",
+		"/Users/pol/Documents/the.square.(2017).eng.1cd.(7232756)/The.Square.2017.DVDRip.XviD.AC3-EVO.srt",
+		"/Users/pol/symbolsmith11/www/testJavacopy5.NEW copy.js",
+		"/Users/pol/symbolsmith11/www/workingCamera1.1 copy.js",
+		"/Users/pol/symbolsmith11/www/testJavacopy5.NEW.js",
+		"/Users/pol/Desktop/finalSub/www/ss.java.js",
+		"/Users/pol/Desktop/finalSub/www/testJavacopy5.NEW.js",
+		"/Users/pol/Desktop/finalSub/www/index.html",
+		"/Users/pol/Documents/Personal Website/ProblemSolving1.1.html",
+		"/Users/pol/Desktop/masterSubmission 2/phpFiles/dbinfo.inc",
+		"/Users/pol/Desktop/masterSubmission 2/phpFiles/dbinfo3.inc",
+		"/Users/pol/Desktop/masterSubmission 2/phpFiles/dbinfo2.inc",
+		"/Users/pol/Desktop/finalSub real3/www/testJavacopy5.NEW.js",
+		"/Users/pol/Desktop/MastersSubmission/save.php",
+		"/Users/pol/Desktop/MastersSubmission/getSaves.php",
+		"/Users/pol/Desktop/MastersSubmission/createTable.php",
+		"/Users/pol/Desktop/MastersSubmission/lonPeriodServer2.php",
+		"/Users/pol/Desktop/MastersSubmission/standard.php",
+		"/Users/pol/Desktop/MastersSubmission/alpha.php",
+		"/Users/pol/Desktop/lonPeriodServer2.php",
+		"/Users/pol/Desktop/finalSub 2/www/testJavacopy5.NEW.js",
+		"/Users/pol/Desktop/finalGap3/www/testJavacopy5.NEW.js",
+		"/Users/pol/Desktop/SS.1.phonegap test/www/working copy.js",
+		"/Users/pol/Desktop/SS.1.phonegap test/www/testJavacopy5.NEW.js",
+		"/Users/pol/Desktop/Getphponline/testJavacopy5.js",
+		"/Applications/MAMP/htdocs/MajorProject-master/testJava.js",
+		"/Applications/MAMP/htdocs/MajorProject-master/sampleCall/test.sql",
+		"/Applications/MAMP/htdocs/MajorProject-master/standardCallTest.php",
+		"/Applications/MAMP/htdocs/MajorProject-master/standardCall.php",
+		"/Applications/MAMP/htdocs/databaseExample/normaliseddatabase.sql",
+		"/Users/pol/Documents/hitler5.htm",
+		"/Applications/MAMP/htdocs/final/json-data-schedule1.5.php",
+		"/Applications/MAMP/htdocs/final/db_config.php",
+		"/Applications/MAMP/htdocs/final/db_connect.php",
+		"/Users/pol/Downloads/PHP AND SQL EXAMPLE/prototype28817/prototypeSQLcall1.0.html",
+		"/Users/pol/cameraSample1.0/config.xml",
+		"/Users/pol/sample1.1/config.xml",
+		"/Users/pol/sample1.0/www/index.html"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"checkout",
+			"add",
+			"cart"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 132.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 50.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

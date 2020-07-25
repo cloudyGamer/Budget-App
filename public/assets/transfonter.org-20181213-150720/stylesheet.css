@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Sackers Gothic Std';
+    src: url('SackersGothicStd-Light.woff2') format('woff2'),
+        url('SackersGothicStd-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+

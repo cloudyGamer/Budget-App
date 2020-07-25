@@ -1,0 +1,22 @@
+
+html{
+    font-size: 62.5%
+}
+                            
+body {
+    font-family: 'Karla',sans-serif;
+    font-size: $m-size;
+    //background-color: $baseColor;
+}
+
+button {
+    cursor:pointer;
+}
+
+buttondisabled {
+    cursor: default;
+}
+
+.is-active {
+    font-weight: bold;
+}
