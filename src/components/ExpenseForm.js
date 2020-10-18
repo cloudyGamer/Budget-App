@@ -11,6 +11,7 @@ export default class ExpenseForm extends React.Component {
           constructor(props) {
                super(props);
                
+               
                this.state = {
                description: props.expense ? props.expense.description : '',
                textArea: props.expense? props.expense.textArea:'',
