@@ -1,0 +1,1 @@
+state.filter((id) => id !== action.id);
