@@ -4,6 +4,7 @@ exports[`should render ExpenseDashboardPage with no props 1`] = `
 <div
   xmlns="http://www.w3.org/1999/xhtml"
 >
+  <Connect(ExpensesSummary) />
   <Connect(ExpenseListFilters) />
   <Connect(ExpenseList) />
 </div>
