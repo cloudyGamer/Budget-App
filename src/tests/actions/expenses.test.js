@@ -1,11 +1,25 @@
 import configureStore from 'redux-mock-store';
  import thunk from 'redux-thunk';
-import { startAddExpense, addExpense, editExpense, removeExpense } from '../../actions/expenses';
+import { startSetExpenses, setExpenses, startAddExpense, addExpense, editExpense, removeExpense } from '../../actions/expenses';
  //import expenses from '../../actions/expenses';
  import expenses from '../fixtures/expenses'; 
  import database from '../../firebase/firebase';
  const createMockStore = configureStore([thunk]);
-
+ 
+beforeEach(
+   (done) => {
+     //do I just clear the database here by setting expenses.No need; its 
+     //its automatocally rewritten
+    
+     const expensesData = {}; 
+     expenses.forEach(({ id, description, note, amount, createdAt }) => {
+           expensesData[id]={ description, note, amount, createdAt };
+      });
+     database.ref('expenses').set(expensesData).then(() => {
+           done();
+      });
+ }
+  );
 test('Set up removeExpense',() => {
      const action = removeExpense({ id:'123' });
      expect(action).toEqual(
@@ -112,19 +126,36 @@ test('should add expense to database and store', (done) => {
            }); 
  });
 
-//test('should set up AddExpense with default values',() => {
-//     const action = addExpense();
-//     expect(action).toEqual(
-//       {
-//            type: 'ADD_EXPENSE',
-//            expense : {
-//                  description:'',
-//                    amount:0,
-//                    note:'',
-//                    createdAt:0,
-//                    id: expect.any(String)
-//            }
-//          
-//       }
-//       );
-//});
+ test('should set up expenses from firebase', (done) => {
+      const store = createMockStore({});
+      store.dispatch(startSetExpenses()).then(() => {
+           const actions = store.getActions();
+           //this doesnt refer to the reducer array -its the action object passed to 
+           //our action generator
+           expect(actions[0]).toEqual({
+                type: 'SET_EXPENSES',
+                expenses
+           });
+           return database.ref('expenses').once('value');
+      }).then(
+        (snapshot) => {
+                const expensesData = [];
+                const val =  snapshot.forEach((snap) => {
+                     expensesData.push({
+                          id:snap.key,
+                          ...snap.val()
+                     });
+                });
+                expect(expensesData).toEqual(expenses);
+                done();
+           });     
+//     const action=setExpenses(expenses);
+//     expect(action).toEqual({
+//          type:'SET_EXPENSES',
+//          expenses
+//     });
+     
+      
+ });
+ 
+ 

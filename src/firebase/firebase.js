@@ -81,41 +81,46 @@ const config = {
 // });
 
  
-//database.ref().once('value')
-//  .then((snapshot) => {
-//      const value = snapshot.val();
-//      console.log('success',value);
-// }).catch((e) => {
-//      console('error detected',e);});
+ /*database.ref().once('value')
+  .then((snapshot) => {
+      const value = snapshot.val();
+      console.log('success',value);
+ }).catch((e) => {
+      console('error detected',e);});
 
- //console.log(snapshot,'snapshot');    
-
-// const expenses = 
-//      {description:'Rent',
-//      note:'includes utilities',
-//      amount:50,
-//      createdAt: 1232
-// };
+console.log(snapshot,'snapshot'); */   
+//////////////////////////////////////// add expense objects to expenses
+ /*const expenses = 
+     {
+      description:'Rent',
+      note:'includes utilities',
+      amount:50,
+      createdAt: 1232
+     };
     
-// database.ref('expenses').set('expenses');
-// database.ref('expenses').push(
-//     expenses
-//   );
-// database.ref('expenses').push(
-//     {description:'Car',
-//      note:'includes utilities',
-//      amount:50,
-//      createdAt: 1232}
-//   );
-// database.ref('expenses').push(
-//     {description:'Plumber',
-//      note:'includes utilities',
-//      amount:50,
-//      createdAt: 1232}
-//   );
- //database.ref('expenses').remove();
+ database.ref('expenses').set('expenses');
+ database.ref('expenses').push(
+     expenses
+   );
+ database.ref('expenses').push(
+     {
+      description:'Car',
+      note:'includes utilities',
+      amount:50,
+      createdAt: 1232
+     }
+   );
+ database.ref('expenses').push(
+     {
+      description:'Plumber',
+      note:'includes utilities',
+      amount:50,
+      createdAt: 1232
+     }
+   );
+database.ref('expenses').remove();*/
  
- //////////////////////////////////////// subscribe to expenses
+// ////////////////////////////////////// subscribe to expenses
 // database.ref('expenses').once('value').then(
 //   (snapshot) => {
 //      const expenses = [];

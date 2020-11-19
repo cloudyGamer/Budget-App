@@ -37,6 +37,7 @@ export const startAddExpense = (expenseData = {}) => {
              });
       };
  };
+
 export const removeExpense = ({id}={}) => ({
      type: 'REMOVE_EXPENSE',
      id
@@ -47,3 +48,30 @@ export const editExpense = (id,updates) => ({
       updates
  
 });
+//set expenses
+export const setExpenses = (expenses) => ({
+      type: 'SET_EXPENSES',
+      expenses
+ });
+ 
+export const startSetExpenses = () => {
+      //expenses are already there when this thing runs
+      //this was your major source of confusion
+      return (dispatch) => {
+          //return reference 1
+          return database.ref('expenses').once('value').then(
+             (snapshot) => {
+                const expensesData = [];
+                const val =  snapshot.forEach((snap) => {
+                     expensesData.push({
+                          id:snap.key,
+                          ...snap.val()
+                     });
+                });
+                //dispatch
+                 dispatch(setExpenses(expensesData));
+           }
+             );
+      };
+ };
+ 

@@ -116,3 +116,19 @@ test('should add expense',() => {
        
        );
 });
+//verify that the correct type is called from our action generators, and that firebase is getting sent the correct values
+//we need to look at its asynchronicity which differentiates it from previous tests here.
+//'passed' first test just looking at state - look at generator - does it dispatch to firebase? no it doesn't but 
+//none of the reducers do. Do I need a start SetExpense in my action generators.
+//we need the code that extracts the expenses using a forEach and prepares it to be sent
+test('should set expenses', () => {
+     const action = {
+          type:'SET_EXPENSES',
+          expenses : [expenses[1]]
+     };
+     
+     const state = expensesReducer(expenses,action);
+     expect(state).toEqual(
+       [expenses[1]]
+       );
+});

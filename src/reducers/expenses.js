@@ -18,18 +18,21 @@
           
           case 'EDIT_EXPENSE':
           return state.map((expense)=>{
-              if(expense.id===action.id){
-                   return{
-                         ...expense,
-                         ...action.updates
-                   };
-              }else{
-                   return expense;
-              }
-         }
-           );
+               if(expense.id===action.id){
+                    return{
+                          ...expense,
+                          ...action.updates
+                    };
+               }else{
+                    return expense;
+               }
+          }
+       );
           
-           default:
+          case 'SET_EXPENSES':
+          return action.expenses;
+          
+          default:
                   return state;
       }
 };
