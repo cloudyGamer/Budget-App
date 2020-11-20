@@ -38,7 +38,7 @@ export const startAddExpense = (expenseData = {}) => {
       };
  };
 
-export const removeExpense = ({id}={}) => ({
+export const removeExpense = ({ id }={}) => ({
      type: 'REMOVE_EXPENSE',
      id
 });
@@ -57,6 +57,9 @@ export const setExpenses = (expenses) => ({
 export const startSetExpenses = () => {
       //expenses are already there when this thing runs
       //this was your major source of confusion
+      //seems like nothing there just randomly adds bits to the database automatically
+      //but the big gain is that you can refresh the browser and the data persists
+      //this is what he means by set up expenses
       return (dispatch) => {
           //return reference 1
           return database.ref('expenses').once('value').then(
@@ -75,3 +78,10 @@ export const startSetExpenses = () => {
       };
  };
  
+export const startRemoveExpense = ({ id }={}) => {
+      return (dispatch) => {
+           return database.ref(`expenses/${id}`).remove().then(() => {
+                dispatch(removeExpense({ id }));
+           });
+      };
+ };

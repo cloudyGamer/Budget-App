@@ -1,6 +1,6 @@
 import configureStore from 'redux-mock-store';
  import thunk from 'redux-thunk';
-import { startSetExpenses, setExpenses, startAddExpense, addExpense, editExpense, removeExpense } from '../../actions/expenses';
+import { startRemoveExpense, startSetExpenses, setExpenses, startAddExpense, addExpense, editExpense, removeExpense } from '../../actions/expenses';
  //import expenses from '../../actions/expenses';
  import expenses from '../fixtures/expenses'; 
  import database from '../../firebase/firebase';
@@ -158,4 +158,24 @@ test('should add expense to database and store', (done) => {
       
  });
  
+ test('should remove expense in firebase', (done) => {
+     //call via id and see do you get null back 
+     const store = createMockStore({});
+     const expense = expenses[1];
+     const id = expense.id;
+      store.dispatch(startRemoveExpense({id})).then(() => {
+           const actions = store.getActions();
+           //this doesnt refer to the reducer array -its the action object passed to 
+           //our action generator
+           expect(actions[0]).toEqual({
+                type: 'REMOVE_EXPENSE',
+                id
+           });
+           return database.ref(`expenses/${id}`).once('value');
+      }).then(
+        (snapshot) => {
+               expect(snapshot.val()).toBeFalsy();
+                done();
+           });  
+ });
  
