@@ -1,6 +1,9 @@
 import configureStore from 'redux-mock-store';
  import thunk from 'redux-thunk';
-import { startRemoveExpense, startSetExpenses, setExpenses, startAddExpense, addExpense, editExpense, removeExpense } from '../../actions/expenses';
+import { startRemoveExpense, startSetExpenses, setExpenses, 
+         startAddExpense, addExpense, editExpense, 
+         startEditExpense, removeExpense 
+    } from '../../actions/expenses';
  //import expenses from '../../actions/expenses';
  import expenses from '../fixtures/expenses'; 
  import database from '../../firebase/firebase';
@@ -10,7 +13,6 @@ beforeEach(
    (done) => {
      //do I just clear the database here by setting expenses.No need; its 
      //its automatocally rewritten
-    
      const expensesData = {}; 
      expenses.forEach(({ id, description, note, amount, createdAt }) => {
            expensesData[id]={ description, note, amount, createdAt };
@@ -30,6 +32,27 @@ test('Set up removeExpense',() => {
        );
 });
 
+test('should remove expense in firebase', (done) => {
+     //call via id and see do you get null back 
+     const store = createMockStore({});
+     const expense = expenses[1];
+     const id = expense.id;
+      store.dispatch(startRemoveExpense({id})).then(() => {
+           const actions = store.getActions();
+           //this doesnt refer to the reducer array -its the action object passed to 
+           //our action generator
+           expect(actions[0]).toEqual({
+                type: 'REMOVE_EXPENSE',
+                id
+           });
+           return database.ref(`expenses/${id}`).once('value');
+      }).then(
+        (snapshot) => {
+               expect(snapshot.val()).toBeFalsy();
+                done();
+           });  
+ });
+ 
 test('set up editExpense',() => {
      const action = editExpense('123', {note:'set note'});
      expect(action).toEqual(
@@ -40,6 +63,29 @@ test('set up editExpense',() => {
        }
        );
 });
+
+ test('should set up startEditExpense', (done) => {
+     const store = createMockStore({});
+     const {createdAt, amount, note} = expenses[1];
+     const updates = {note:'new note', description:'something else'};
+     const id = expenses[1].id;
+     
+     store.dispatch(startEditExpense(id,updates)).then(() => {
+           const actions = store.getActions();
+           expect(actions[0]).toEqual({
+                type: 'EDIT_EXPENSE',
+                id,
+                updates
+           });
+           return database.ref(`expenses/${id}`).once('value').then(
+              (snapshot) => {
+                      const value = snapshot.val();
+                      expect(value.description).toBe('something else');
+                   done();
+               }
+             );
+      });
+ });
 //it doesn't have an id yet because it hasn't gone to firebase
 test('should set up addExpense with provided values',() => {
      const action = addExpense(expenses[2]);
@@ -158,24 +204,5 @@ test('should add expense to database and store', (done) => {
       
  });
  
- test('should remove expense in firebase', (done) => {
-     //call via id and see do you get null back 
-     const store = createMockStore({});
-     const expense = expenses[1];
-     const id = expense.id;
-      store.dispatch(startRemoveExpense({id})).then(() => {
-           const actions = store.getActions();
-           //this doesnt refer to the reducer array -its the action object passed to 
-           //our action generator
-           expect(actions[0]).toEqual({
-                type: 'REMOVE_EXPENSE',
-                id
-           });
-           return database.ref(`expenses/${id}`).once('value');
-      }).then(
-        (snapshot) => {
-               expect(snapshot.val()).toBeFalsy();
-                done();
-           });  
- });
+ 
  
