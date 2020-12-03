@@ -10,6 +10,14 @@ exports[`should render header correctly 1`] = `
     ariaCurrent="true"
     exact={true}
     to="/"
+    xmlns="http://www.w3.org/1999/xhtml"
+  >
+    Log In
+  </NavLink>
+  <NavLink
+    activeClassName="is-active"
+    ariaCurrent="true"
+    to="/dashboard"
   >
     Dashboard
   </NavLink>
@@ -27,5 +35,10 @@ exports[`should render header correctly 1`] = `
   >
     Help
   </NavLink>
+  <button
+    onClick={[Function]}
+  >
+    Logout
+  </button>
 </header>
 `;

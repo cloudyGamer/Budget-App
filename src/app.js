@@ -13,7 +13,7 @@ import getVisibleExpenses from './selectors/expenses';
 import { startSetExpenses } from './actions/expenses';
 //import filters
 import { setTextFilter } from './actions/filters';
-import  './firebase/firebase';
+import  { firebase } from './firebase/firebase';
 
  
 
@@ -37,5 +37,11 @@ store.dispatch(
      //return reference 1
      () => {ReactDOM.render(jsx, document.getElementById('app'));});
 
-//
+firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+           console.log('logged in');
+      } else {
+           console.log('logged out');
+      }
+ });
 
