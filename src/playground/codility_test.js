@@ -196,22 +196,24 @@ console.log("codility test");
 //
 //console.log(solution(string));   
 //</editor-fold>
-// const A = [5, 3, 7, 7, 10]; 
-// const B = [1, 6, 6, 9, 9];
-//const solution = (A,B) => {
-//     let stepCount = 0;
-//      for (var i = 0; i < A.length; i++) {
-//           if (B[i]<A[i+1]&&B[i]>A[i-1]&&B[i]>=B[i+1]) {
-//                const swapA = B[i];
-//                B[i]=A[i]+'(s)';
-//                A[i]=swapA+'(s)';
-//                stepCount++;
-//                console.log(`A: ${JSON.stringify(A)} B: ${JSON.stringify(B)}`);
-//           }else if(B[i]>=B[i+1]&&B[i]>=B[i+1]){return -1;};
-//           console.log(` no swap A: ${JSON.stringify(A)} B: ${JSON.stringify(B)}`);
-//      }
-//      return stepCount;
-//};
-//
+
+ const A = [5, 3, 7, 7, 10]; 
+ const B = [1, 6, 6, 9, 9];
+ 
+const solution = (A,B) => {
+     let stepCount = 0;
+      for (var i = 0; i < A.length; i++) {
+           if (B[i]<A[i+1]&&B[i]>A[i-1]&&B[i]>=B[i+1]) {
+                const swapA = B[i];
+                B[i]=A[i]+'(s)';
+                A[i]=swapA+'(s)';
+                stepCount++;
+                console.log(`A: ${JSON.stringify(A)} B: ${JSON.stringify(B)}`);
+           }else if(B[i]>=B[i+1]&&B[i]>=A[i+1]){return -1;};
+           console.log(` no swap A: ${JSON.stringify(A)} B: ${JSON.stringify(B)}`);
+      }
+      return stepCount;
+};
+
 // console.log( solution(A,B));
 

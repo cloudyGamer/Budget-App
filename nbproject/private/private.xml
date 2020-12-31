@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="24">
-        <file>
-            <url>src/playground/redux-expensify.js</url>
-            <bookmark id="10">
-                <name/>
-                <line>57</line>
-                <key/>
-            </bookmark>
-            <bookmark id="9">
-                <name/>
-                <line>159</line>
-                <key/>
-            </bookmark>
-        </file>
-        <file>
-            <url>src/tests/components/ExpenseListFilters.test.js</url>
-            <bookmark id="20">
-                <name/>
-                <line>71</line>
-                <key/>
-            </bookmark>
-        </file>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="30">
         <file>
             <url>src/components/ExpenseListFilters.js</url>
             <bookmark id="22">
@@ -32,6 +11,14 @@
             <bookmark id="21">
                 <name/>
                 <line>52</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>src/playground/codilityRevision.js</url>
+            <bookmark id="30">
+                <name/>
+                <line>429</line>
                 <key/>
             </bookmark>
         </file>
@@ -66,12 +53,29 @@
                 <key/>
             </bookmark>
         </file>
+        <file>
+            <url>src/playground/redux-expensify.js</url>
+            <bookmark id="10">
+                <name/>
+                <line>57</line>
+                <key/>
+            </bookmark>
+            <bookmark id="9">
+                <name/>
+                <line>159</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>src/tests/components/ExpenseListFilters.test.js</url>
+            <bookmark id="20">
+                <name/>
+                <line>71</line>
+                <key/>
+            </bookmark>
+        </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/Users/pol/Documents/react-course-projects/budget/src/components/Header.js</file>
-            <file>file:/Users/pol/Documents/react-course-projects/budget/src/tests/components/LoginPage.test.js</file>
-            <file>file:/Users/pol/Documents/react-course-projects/budget/src/actions/auth.js</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
