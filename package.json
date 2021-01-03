@@ -28,6 +28,7 @@
     "express": "4.15.4",
     "extract-text-webpack-plugin": "^3.0.2",
     "firebase": "4.2.0",
+    "history": "4.7.2",
     "jshint": "^2.10.1",
     "loader": "^2.1.1",
     "makecancelable": "^1.1.1",

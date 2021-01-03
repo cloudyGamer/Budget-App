@@ -3,8 +3,9 @@
   * To change this template file, choose Tools | Templates
   * and open the template in the editor.
   */
- import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
-import React from 'react';
+ import {Router, Route, Switch, Link, NavLink} from 'react-router-dom';
+ import createHistory from 'history/createBrowserHistory';
+ import React from 'react';
  import ExpenseDashboardPage from '../components/ExpenseDashboardPage';
  import AddExpensePage from '../components/AddExpensePage';
  import HelpPage from '../components/HelpPage';
@@ -12,20 +13,23 @@ import React from 'react';
  import NotFoundPage from '../components/NotFoundPage';
  import Header from '../components/Header';
  import LoginPage from '../components/LoginPage';
+ import PrivateRoute from './PrivateRoute';
+ 
+ export const history = createHistory();
+ 
 const AppRouter = () => (
-  <BrowserRouter xmlns="http://www.w3.org/1999/xhtml">
+  <Router history={history} xmlns="http://www.w3.org/1999/xhtml">
      <div>
-     <Header />
      <Switch>
           <Route path="/" component={LoginPage} exact={true} />
-          <Route path="/dashboard" component={ExpenseDashboardPage} />
-          <Route path="/create" component={AddExpensePage}/>
+          <PrivateRoute path="/dashboard" component={ExpenseDashboardPage} />
+          <PrivateRoute path="/create" component={AddExpensePage}/>
           <Route path="/help" component={HelpPage}/>
-          <Route path="/edit/:id" component={EditExpensePage}/>
+          <PrivateRoute path="/edit/:id" component={EditExpensePage}/>
           <Route component={NotFoundPage} />
      </Switch>
      </div>
-  </BrowserRouter>
+  </Router>
   );
 
 
