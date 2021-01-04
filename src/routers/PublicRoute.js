@@ -4,25 +4,25 @@
  import Header from '../components/Header';
 
  
-   export const PrivateRoute = ({ 
+ export const PublicRoute = ({ 
         isAuthenticated, 
         component:Component, 
         ...rest 
    }) => (
    <Route {...rest} xmlns="http://www.w3.org/1999/xhtml" component={(props) => (
           isAuthenticated ? (
-          <div>
-               <Header/>
                <Component {...props}/>
-          </div>  
           ):(
-          <Redirect to="/"/>
+          <div>
+           <Header/>
+           <Redirect to="/dashboard"/>
+          </div>
           )
        
      )}/>
  );
  const mapStateToProps = (state) => ({
-      isAuthenticated: !!state.auth.uid
+      isAuthenticated: !state.auth.uid
  });
  
-  export default connect(mapStateToProps)(PrivateRoute);
+  export default connect(mapStateToProps)(PublicRoute);

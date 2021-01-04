@@ -7,8 +7,7 @@ import React from 'react';
 export const Header = ({ startLogout }) => (
   <header>
   <h1>Expensify App</h1>
-  <NavLink to="/" activeClassName="is-active" exact={true} xmlns="http://www.w3.org/1999/xhtml">Log In</NavLink>
-  <NavLink to="/dashboard" activeClassName="is-active">Dashboard</NavLink>
+  <NavLink xmlns="http://www.w3.org/1999/xhtml" to="/dashboard" activeClassName="is-active">Dashboard</NavLink>
   <NavLink to="/create" activeClassName="is-active">Add Expense</NavLink>
   <NavLink to="/help" activeClassName="is-active">Help</NavLink>
   <button onClick={startLogout}>Logout</button>
