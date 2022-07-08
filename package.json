@@ -32,7 +32,7 @@
     "jshint": "^2.10.1",
     "loader": "^2.1.1",
     "makecancelable": "^1.1.1",
-    "moment": "2.18.1",
+    "moment": "2.29.4",
     "node": "^14.5.0",
     "node-sass": "^4.14.1",
     "normalize.css": "7.0.0",
